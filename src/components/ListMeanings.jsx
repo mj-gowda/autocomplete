@@ -50,7 +50,7 @@ const ListMeanings = () => {
                             <span className='text-gray-600'>{meaning[0]?.meanings?.[0]?.definitions?.[0]?.definition}</span>
                         </div>
                     </div>))
-                ) : (<p> No definitions found</p>)
+                ) : (<p> Loading...</p>)
                 }
             </div>
 
