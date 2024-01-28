@@ -14,14 +14,14 @@ const ListMeanings = () => {
                     return await getMeaning(word);
                 }));
                 setMeanings([...meaningsArray]);
-                console.log('meanings', meanings)
+                //console.log('meanings', meanings)
             } catch (error) {
                 console.error('Error fetching meanings:', error.message);
             }
         };
 
         fetchMeaning();
-    }, []);
+    }, [words]);
 
 
     const handleClick = () => {

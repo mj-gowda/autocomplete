@@ -3,7 +3,7 @@ import { useState, useContext } from 'react';
 import ListMeanings from './ListMeanings';
 import useFetchPromise from '../lib/useFetchPromise';
 import { DefinitionContext } from '../context/context';
-const debounceWait = 500;
+const debounceWait = 400;
 
 const SearchBox = ({ transformData, promise, autoComplete, Suggestions }) => {
     const state = useContext(DefinitionContext);
@@ -31,6 +31,7 @@ const SearchBox = ({ transformData, promise, autoComplete, Suggestions }) => {
         const keyCode = event.keyCode;
         if (keyCode === 13) {
             // user enters 
+            state.setWords([]);
             state.setWords(data);
             state.setDefinitions(true);
             state.setList(false)

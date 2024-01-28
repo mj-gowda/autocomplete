@@ -26,7 +26,7 @@ const useFetchPromise = (
         debounceFunction(async (query, transformData, signal) => {
             try {
                 const response = await promise(query, signal);
-                setData(transformData(response));
+                setData(response);
             } catch (e) {
                 console.log(e);
                 if (!signal.aborted) setError(e);
